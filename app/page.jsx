@@ -21,19 +21,21 @@ export default function Home() {
         </div>
       </div>
       <div className="fixed right-16 flex flex-col gap-2
-       text-[#aa9d89] font-bebas top-20 text-md">
+       text-[#aa9d89] font-bebas top-20 text-md tracking-widest">
         <p>SKILLS</p>
         <p>PROJECTS</p>
         <p>CONTACT</p>
       </div>
         <img src='potrait.png' width={2000} height={2000} className="-z-10 absolute -top-28 -left-28"/>
-      <main className="flex flex-col justify-center items-center font-anton mt-28 text-9xl">
-        <p className="text-[#aa9d89] text-xl font-bebas mb-4">RHISHAV &ensp; DHALI</p>
-        <div className="ml-48">
+      <main className="flex flex-col justify-center items-center font-anton mt-40 text-9xl">
+        <p className="text-[#aa9d89] text-xl font-bebas">RHISHAV &ensp; DHALI</p>
+        <div className="ml-48 mt-12">
           <p className="text-[#aa9d89] ml-36">MAKING</p>
           <p className="text-white/70 ml-36 text-3xl font-anton">MY <span className="text-[#ec5938] text-9xl font-anton">PASSIONS</span></p>
           <p className="text-[#aa9d89]">COLLIDE ./</p>
-          <p className="text-white/50 text-2xl font-anton mt-36">code. design. and the boundless digital frontier</p>
+        </div>
+        <div className="bg-white/10 mt-36 p-2 w-[100vw] flex justify-center">
+          <p className="text-white/50 text-4xl font-bebas tracking-widest">code, design, and the boundless digital frontier</p>
         </div>
         
         
