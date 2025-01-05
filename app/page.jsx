@@ -1,8 +1,11 @@
 'use client'
 import Image from "next/image"
+import Cursor from "@/components/Cursor"
 
 export default function Home() {
   return (
+    <>
+    <Cursor/>
     <div>
       <div className="fixed left-16 flex flex-col gap-5">
         <a href="/">
@@ -21,7 +24,7 @@ export default function Home() {
         </div>
       </div>
       <div className="fixed right-16 flex flex-col gap-2
-       text-[#aa9d89] font-bebas top-20 text-md tracking-widest">
+       text-[#aa9d89] font-bebas top-20 text-md tracking-widest cursor-pointer">
         <p>SKILLS</p>
         <p>PROJECTS</p>
         <p>CONTACT</p>
@@ -31,9 +34,9 @@ export default function Home() {
             width: '1500px',
             height: '843px',
           }}/>
-      <main className="flex flex-col justify-center items-center font-anton mt-40 text-9xl">
+      <main className="flex flex-col justify-center items-center font-anton mt-40 text-9xl cursor-default">
         <p className="text-[#aa9d89] text-xl font-bebas">RHISHAV &ensp; DHALI</p>
-        <div className="ml-48 mt-12">
+        <div data-cursor-hover className="ml-48 mt-12">
           <p className="text-[#aa9d89] ml-36">MAKING</p>
           <p className="text-white/70 ml-36 text-3xl font-anton">MY <span className="text-[#ec5938] text-9xl font-anton">PASSIONS</span></p>
           <p className="text-[#aa9d89]">COLLIDE ./</p>
@@ -45,5 +48,6 @@ export default function Home() {
         
       </main>
     </div>
+    </>
   )
 }
