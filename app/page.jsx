@@ -26,7 +26,11 @@ export default function Home() {
         <p>PROJECTS</p>
         <p>CONTACT</p>
       </div>
-        <img src='potrait.png' width={2000} height={2000} className="-z-10 absolute -top-28 -left-28"/>
+        <Image src='/potrait.png' width={2000} height={2000} className="-z-10 absolute -top-28 -left-20 object-cover"
+          style={{
+            width: '1500px',
+            height: '843px',
+          }}/>
       <main className="flex flex-col justify-center items-center font-anton mt-40 text-9xl">
         <p className="text-[#aa9d89] text-xl font-bebas">RHISHAV &ensp; DHALI</p>
         <div className="ml-48 mt-12">
