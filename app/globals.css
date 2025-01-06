@@ -8,6 +8,14 @@ body{
   background-color: #0e0e0e;
   color:white;
 }
+#mask{
+  mask-image: url("/circle.svg");
+  background: #ec5938;
+  mask-size:50px;
+  height:100vh;
+  width:100vw;
+  
+}
 
 @layer base {
   :root {

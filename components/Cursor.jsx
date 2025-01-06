@@ -18,12 +18,6 @@ const Cursor = () => {
       gsap.to(cursor, {
         x: e.clientX,
         y: e.clientY,
-        duration: 0.3,
-        ease: "power2.out"
-      });
-
-      // Animate cursor scale based on hover state
-      gsap.to(cursor, {
         scale: isHovering ? 15 : 1,
         duration: 0.3,
         ease: "power2.out"
@@ -40,8 +34,8 @@ const Cursor = () => {
   return (
     <div 
       ref={cursorRef}
-      className="fixed top-0 left-0 w-4 h-4 rounded-full bg-orange-700 pointer-events-none mix-blend-difference transform -translate-x-1/2 -translate-y-1/2"
-      style={{ zIndex: 9999 }}
+      className="fixed top-0 left-0 w-4 h-4 rounded-full bg-[#ec5938]  mix-blend-difference pointer-events-none transform -translate-x-1/2 -translate-y-1/2"
+      style={{ zIndex: 50 }}
     />
   );
 };
