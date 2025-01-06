@@ -37,12 +37,12 @@ export default function Home() {
     {/*BACKGROUND IMAGES*/}
 
 
-    <Image src='/potraitbg.png' width={2000} height={2000} className="-z-30 absolute -top-28 -left-20 object-cover"
+    <Image src='/potraitbg.png' width={2000} height={2000} className="-z-30 absolute -top-24 -left-20 object-cover"
       style={{
         width: '1500px',
         height: '843px',
       }}/>
-    <Image src='/potraitfg.png' width={2000} height={2000} className="-z-10 absolute -top-28 -left-20 object-cover"
+    <Image src='/potraitfg.png' width={2000} height={2000} className="-z-10 absolute -top-24 -left-20 object-cover"
       style={{
         width: '1500px',
         height: '844px',
@@ -52,19 +52,19 @@ export default function Home() {
     {/*MAIN SECTION-INTRO*/}
 
     <main className="flex flex-col justify-center items-center font-anton pt-40 text-9xl cursor-default overflow-hidden relative">
-      <div className="w-20 h-20 bg-[#ec5938] rounded-full -z-20 absolute -ml-80 transform scale-[12]"></div>
+      <div className="w-20 h-20 bg-[#ec5938] rounded-full -z-20 absolute -ml-80 transform scale-[1]"></div>
       <p className="text-[#aa9d89] text-xl font-bebas">RHISHAV &ensp; DHALI</p>
-      <div data-cursor-hover className="ml-48 mt-12">
-        <p className="text-[#aa9d89] ml-36">MAKING</p>
-        <p className="text-white/70 ml-36 text-3xl font-anton text-nowrap">MY <span className="text-[#ec5938] text-9xl font-anton">PASSIONS</span></p>
-        <p className="text-[#aa9d89] mb-28">COLLIDE ./</p>
+      <div data-cursor-hover className="ml-60 mt-12">
+        <p className="text-[#aa9d89] ml-36 p-2">Making</p>
+        <p className="text-white/70 ml-36 text-3xl text-nowrap p-2">my <span className="text-[#ec5938] text-9xl">PASSIONS</span></p>
+        <p className="text-[#aa9d89] mb-20 p-2">COLLIDE ./</p>
       </div>
 
     </main>
 
 
-    <div className="bg-white/10 mt-4 p-2 w-[100vw] flex justify-center">
-      <p className="text-white/50 text-4xl font-bebas tracking-widest">code, design, and the boundless digital frontier</p>
+    <div className="bg-white/10 p-2 w-[100vw] flex justify-center">
+      <p className="text-white/50 text-2xl font-script tracking-widest">code, design, and the boundless digital frontier</p>
     </div>
         
         

@@ -21,7 +21,15 @@ module.exports = {
   			anton: [
   				'Anton',
   				'serif'
-  			]
+  			],
+				script:[
+					'Dancing Script',
+					'serif'
+				],
+				oswald:[
+					'Oswald',
+					'serif'
+				],
   		},
   		backgroundImage: {
   			'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
