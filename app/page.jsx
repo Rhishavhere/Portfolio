@@ -1,8 +1,15 @@
 'use client'
 import Image from "next/image"
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useState, useEffect } from "react";
 import Cursor from "@/components/Cursor"
 
 export default function Home() {
+
+  const { scrollY } = useScroll();
+
+  const circleScale = useTransform(scrollY, [0, 400], [0, 14]);
+
   return (
     <>
     <Cursor/>
@@ -31,7 +38,7 @@ export default function Home() {
       <p>PROJECTS</p>
       <p>CONTACT</p>
     </div>
-    <div>
+    
       
 
     {/*BACKGROUND IMAGES*/}
@@ -52,7 +59,9 @@ export default function Home() {
     {/*MAIN SECTION-INTRO*/}
 
     <main className="flex flex-col justify-center items-center font-anton pt-40 text-9xl cursor-default overflow-hidden relative">
-      <div className="w-20 h-20 bg-[#ec5938] rounded-full -z-20 absolute -ml-80 transform scale-[1]"></div>
+      <motion.div className="w-20 h-20 bg-[#aa9d89] rounded-full -z-20 absolute -ml-80 transform"
+        style={{scale:circleScale}}
+      ></motion.div>
       <p className="text-[#aa9d89] text-xl font-bebas">RHISHAV &ensp; DHALI</p>
       <div data-cursor-hover className="ml-60 mt-12">
         <p className="text-[#aa9d89] ml-36 p-2">Making</p>
@@ -67,8 +76,26 @@ export default function Home() {
       <p className="text-white/50 text-2xl font-script tracking-widest">code, design, and the boundless digital frontier</p>
     </div>
         
-        
-    </div>
+    <div>
+      <p className="text-8xl">HELLO</p>
+      <p className="text-8xl">HELLO</p>
+      <p className="text-8xl">HELLO</p>
+      <p className="text-8xl">HELLO</p>
+      <p className="text-8xl">HELLO</p>
+      <p className="text-8xl">HELLO</p>
+      <p className="text-8xl">HELLO</p>
+      <p className="text-8xl">HELLO</p>
+      <p className="text-8xl">HELLO</p>
+      <p className="text-8xl">HELLO</p>
+      <p className="text-8xl">HELLO</p>
+      <p className="text-8xl">HELLO</p>
+      <p className="text-8xl">HELLO</p>
+      <p className="text-8xl">HELLO</p>
+      <p className="text-8xl">HELLO</p>
+      <p className="text-8xl">HELLO</p>
+      <p className="text-8xl">HELLO</p>
+    </div>   
+    
     </>
   )
 }
