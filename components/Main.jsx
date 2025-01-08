@@ -24,7 +24,7 @@ export default function Main(){
   })
 
   return(
-    <div id="main" className="overflow-hidden">
+    <div className="overflow-hidden main">
     <Image src='/potraitfg.png' width={2000} height={2000} className="bgin -z-10 absolute -top-24 -left-20 object-cover"
       style={{
         width: '1500px',
@@ -35,7 +35,7 @@ export default function Main(){
         width: '1500px',
         height: '843px',
       }}/>
-    <main className="flex flex-col justify-center items-center font-anton pt-40 text-9xl cursor-default relative">
+    <main className="flex flex-col justify-center items-center font-mont font-anton pt-40 text-9xl cursor-default relative">
       <p className="text-[#aa9d89] text-xl font-bebas">RHISHAV &ensp; DHALI</p>
       <div data-cursor-hover className="ml-60 mt-12">
         <p className="text-[#aa9d89] ml-36 p-2 textin">Making</p>
