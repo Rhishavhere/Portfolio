@@ -30,6 +30,14 @@ module.exports = {
 					'Oswald',
 					'serif'
 				],
+        mont: [
+          'Montserrat',
+          'serif',
+          {
+            fontOpticalSizing: 'auto',
+            fontStyle: 'normal',
+          }
+        ]
   		},
 			keyframes: {
         shine: {
@@ -50,6 +58,8 @@ module.exports = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		colors: {
+				'1':'#aa9d89',
+				'2':'#ec5938',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
