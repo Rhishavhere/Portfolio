@@ -9,10 +9,11 @@ import Nav from "@/components/Nav";
 import Main from "@/components/Main";
 import Info from "@/components/Info";
 import Skills from "@/components/Skills";
+import AiProj from "@/components/AiProj";
 
 export default function Home() {
   return (
-    <>
+    <div className="overflow-x-hidden">
     <Cursor/>
     <Links/>
     <Nav/>
@@ -20,6 +21,7 @@ export default function Home() {
     <Main/>
     <Info/>
     <Skills/>
+    <AiProj/>
         
     <p>.</p>
     <p>.</p>
@@ -55,6 +57,6 @@ export default function Home() {
     <p>.</p>
     <p>.</p>
     <p>.</p>
-    </>
+    </div>
   )
 }
