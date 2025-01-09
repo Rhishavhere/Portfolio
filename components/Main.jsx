@@ -36,11 +36,11 @@ export default function Main(){
         height: '843px',
       }}/>
     <main className="flex flex-col justify-center items-center font-mont font-anton pt-40 text-9xl cursor-default relative">
-      <p className="text-[#aa9d89] text-xl font-bebas">RHISHAV &ensp; DHALI</p>
+      <p className="text-1 text-xl font-bebas">RHISHAV &ensp; DHALI</p>
       <div data-cursor-hover className="ml-60 mt-12">
-        <p className="text-[#aa9d89] ml-36 p-2 textin">Making</p>
+        <p className="text-1 ml-36 p-2 textin">Making</p>
         <p className="text-white/70 ml-36 text-3xl text-nowrap p-2 textin">my <span className="text-[#ec5938] text-9xl">PASSIONS</span></p>
-        <p className="text-[#aa9d89] mb-20 p-2 textin">COLLIDE ./</p>
+        <p className="text-1 mb-20 p-2 textin">COLLIDE ./</p>
       </div>
     </main>
 

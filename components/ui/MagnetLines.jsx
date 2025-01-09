@@ -66,6 +66,7 @@ export default function MagnetLines({
   ));
 
   return (
+
     <div
       ref={containerRef}
       className={`grid place-items-center ${className}`}
@@ -79,5 +80,6 @@ export default function MagnetLines({
     >
       {spans}
     </div>
+
   );
 }
