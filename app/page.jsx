@@ -10,6 +10,7 @@ import Nav from "@/components/Nav";
 import Main from "@/components/Main";
 import Info from "@/components/Info";
 import Skills from "@/components/Skills";
+import AiProj from "@/components/AiProj";
 
 // const DynamicAiProj = dynamic(() => import("@/components/AiProj"), {
 //   ssr: false
@@ -25,6 +26,7 @@ export default function Home() {
     <Main/>
     <Info/>
     <Skills/>
+    <AiProj/>
     {/* <DynamicAiProj/> */}
         
   

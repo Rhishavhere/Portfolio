@@ -1,4 +1,5 @@
 'use client'
+import { useEffect, useState } from 'react';
 import Spline from '@splinetool/react-spline';
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap"
@@ -8,14 +9,15 @@ gsap.registerPlugin(useGSAP,ScrollTrigger);
 import Card from './Card';
 
 export default function AiProj(){
+  // Create a state to check mount status.
+  const [mounted, setMounted] = useState(false);
 
-  const Project1 = {
-    imageUrl: 'https://via.placeholder.com/300x200',
-    title: 'My Awesome Project',
-    description: 'This is a description of my awesome project.',
-  };
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-  useGSAP(()=>{
+  // Define your GSAP animations
+  useGSAP(() => {
     gsap.from(".robot",{
       scrollTrigger:{
         trigger:".robot",
@@ -23,7 +25,7 @@ export default function AiProj(){
       },
       scale:0,
       delay:1
-    }),
+    });
     gsap.from(".craft",{
       scrollTrigger:{
         trigger:".craft",
@@ -31,8 +33,15 @@ export default function AiProj(){
       },
       opacity:0,
       delay:1
-    })
-  })
+    });
+  });
+
+  // Sample project data (currently not used further)
+  const Project1 = {
+    imageUrl: 'https://via.placeholder.com/300x200',
+    title: 'My Awesome Project',
+    description: 'This is a description of my awesome project.',
+  };
 
   return(
   
@@ -46,7 +55,9 @@ export default function AiProj(){
         
         <div className='flex items-end'>
           <div className='w-96 h-96 -ml-20 relative robot'>
-            <Spline scene="https://prod.spline.design/JTFe1HJfgUpBTTCE/scene.splinecode" />
+            {mounted && (
+              <Spline scene="https://prod.spline.design/JTFe1HJfgUpBTTCE/scene.splinecode" />
+            )}
             <div className='bg-[#0e0e0e] border-2 border-[#aa9d89] w-36 h-10 absolute bottom-5 right-4 rounded-xl flex justify-center items-center'>
               <p className='text-1'>AI Projects </p>
             </div>
