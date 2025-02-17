@@ -1,3 +1,4 @@
+'use client'
 const ShinyText = ({ text, disabled = false, speed = 5, className = '', color='#b5b5b5a4' }) => {
   const animationDuration = `${speed}s`;
 
