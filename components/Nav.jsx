@@ -1,3 +1,4 @@
+'use client'
 export default function Nav(){
   return(
     <div className="fixed right-16 flex flex-col gap-2

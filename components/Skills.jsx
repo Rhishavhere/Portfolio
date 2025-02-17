@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image"
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap"

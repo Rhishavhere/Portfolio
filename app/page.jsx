@@ -23,6 +23,9 @@ export default function Home() {
     <Skills/>
     <AiProj/>
         
+  
+    <div className="text-black">
+      <p>.</p>
     <p>.</p>
     <p>.</p>
     <p>.</p>
@@ -56,7 +59,8 @@ export default function Home() {
     <p>.</p>
     <p>.</p>
     <p>.</p>
-    <p>.</p>
+    </div>
+    
     </div>
   )
 }
