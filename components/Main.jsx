@@ -36,7 +36,7 @@ export default function Main(){
         width: '1500px',
         height: '843px',
       }}/>
-    <main className="flex flex-col justify-center items-center font-mont font-anton pt-40 text-9xl cursor-default relative">
+    <main className="flex flex-col justify-center items-center font-anton pt-40 text-9xl cursor-default relative">
       <p className="text-1 text-xl font-bebas">RHISHAV &ensp; DHALI</p>
       <div data-cursor-hover className="ml-60 mt-12">
         <p className="text-1 ml-36 p-2 textin">Making</p>
