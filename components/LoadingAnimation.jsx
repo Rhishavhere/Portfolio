@@ -52,7 +52,7 @@ function LoadingAnimation({ onComplete }) {
         duration: 0.8,
         ease: "power2.in",
       },
-      "+=0.2"
+      "-=0.5"
     );
 
     // STEP 4: Fade out the entire loading container.
@@ -82,13 +82,18 @@ function LoadingAnimation({ onComplete }) {
         {/* The progress bar */}
         <div
           ref={barRef}
-          className="bg-white h-[2px] w-64 rounded-full origin-left"
+          className="bg-white h-[2px] w-64 rounded-md origin-left mt-[32px] absolute"
         />
         {/* The ball – positioned to overlap the bar */}
-        <div
-          ref={ballRef}
-          className="bg-white rounded-full w-8 h-8 -mt-9"
-        />
+          <div
+            ref={ballRef}
+            className="bg-white rounded-full w-8 h-8"
+          />
+          <p className='font-poppins itlatic'>loading ...</p>
+          {/* <div className="bg-white rounded-full w-6 h-6"></div>
+          <div className="bg-white rounded-full w-4 h-4"></div>
+          <div className="bg-white rounded-full w-2 h-2"></div> */}
+        
       </div>
     </div>
   );
