@@ -3,7 +3,7 @@ import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect } from "react"
 import dynamic from "next/dynamic";
-
+import waves from "@/public/waves.svg"
 import Cursor from "@/components/Cursor"
 import Links from "@/components/Links";
 import Nav from "@/components/Nav";
@@ -24,17 +24,13 @@ export default function Home() {
   return (
     <>
       {/* Show the loading animation until it completes */}
-      {loading && <LoadingAnimation onComplete={() => setLoading(false)} />}
+      {/* {loading && <LoadingAnimation onComplete={() => setLoading(false)} />} */}
 
-      <div className="bg-white text-black font-poppins w-screen h-screen flex flex-col justify-center items-center relative">
+      <div className="bg-white text-2xl text-black font-poppins w-screen h-screen flex flex-col justify-center items-center relative">
         <p>hello</p>
-        <p>I am Rhishav Dhali</p>
-        <p>welcome to my journey</p>
-        <div className="absolute bottom-0">
-          <div className="bg-[#0e0e0e]/10 w-screen h-16"></div>
-          <div className="bg-[#0e0e0e]/20 w-screen h-12"></div>
-          <div className="bg-[#0e0e0e]/50 w-screen h-10"></div>
-          <div className="bg-[#0e0e0e]/90 w-screen h-8"></div>
+        <p className="italic">welcome to my journey</p>
+        <div className="absolute bottom-0 left-0">
+          <Image src={waves}/>
         </div>
       </div>
 

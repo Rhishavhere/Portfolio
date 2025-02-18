@@ -82,7 +82,7 @@ function LoadingAnimation({ onComplete }) {
         {/* The progress bar */}
         <div
           ref={barRef}
-          className="bg-white h-1 w-64 rounded-full origin-left"
+          className="bg-white h-[2px] w-64 rounded-full origin-left"
         />
         {/* The ball – positioned to overlap the bar */}
         <div
