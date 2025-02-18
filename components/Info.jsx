@@ -6,6 +6,7 @@ gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 // import MagnetLines from "./ui/MagnetLines";
 import dynamic from 'next/dynamic';
+import ShinyText from "./ui/ShinyText";
 
 const TextPressure = dynamic(() => import('@/components/ui/TextPressure'), {
   ssr: false
@@ -43,7 +44,7 @@ export default function Info(){
       </div>
       </div>
       
-      <div data-cursor-hover style={{position: 'relative', height: '500px', marginLeft:'20px', marginRight:'20px'}}>
+      <div data-cursor-hover style={{position: 'relative', height: '400px', marginLeft:'20px', marginRight:'20px'}}>
         <TextPressure
           text="Experiences"
           flex={true}
@@ -61,7 +62,7 @@ export default function Info(){
       <div className="flex flex-col justify-center items-center">
 
       <div className="relative p-3 w-fit bg-stone-700/30 ">
-        <p className="text-4xl text-orange-200/80 font-poppins text-center">using code and tech.</p>
+        <ShinyText text="code and tech." font="poppins" disabled={false} speed={2} className='text-4xl text-orange-200/80 font-poppins text-center' />
         <div className="absolute mix-blend-color bg-[#0e0e0e] w-full h-full left-0 top-0"></div>
       </div>
       </div>
