@@ -12,9 +12,9 @@ import Info from "@/components/Info";
 import Skills from "@/components/Skills";
 // import AiProj from "@/components/AiProj";
 
-const DynamicAiProj = dynamic(() => import("@/components/AiProj"), {
-  ssr: false
-});
+// const DynamicAiProj = dynamic(() => import("@/components/AiProj"), {
+//   ssr: false
+// });
 
 export default function Home() {
   return (
@@ -25,9 +25,9 @@ export default function Home() {
         
     <Main/>
     <Info/>
-    <Skills/>
+    {/* <Skills/> */}
     {/* <AiProj/> */}
-    <DynamicAiProj/>
+    {/* <DynamicAiProj/> */}
         
   
     <div className="text-black">
