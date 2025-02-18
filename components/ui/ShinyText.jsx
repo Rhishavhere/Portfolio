@@ -1,7 +1,7 @@
 'use client'
-const ShinyText = ({ text, disabled = false, speed = 5, className = '', color='#b5b5b5a4' }) => {
+const ShinyText = ({ text, font, disabled = false, speed = 5, className = '', color='#b5b5b5a4' }) => {
   const animationDuration = `${speed}s`;
-
+  console.log(font)
   return (
     <div
       className={`text-[${color}] bg-clip-text inline-block ${disabled ? '' : 'animate-shine'} ${className}`}
@@ -10,6 +10,7 @@ const ShinyText = ({ text, disabled = false, speed = 5, className = '', color='#
         backgroundSize: '200% 100%',
         WebkitBackgroundClip: 'text',
         animationDuration: animationDuration,
+        fontFamily: font? "poppins" : '',
       }}
     >
       {text}
