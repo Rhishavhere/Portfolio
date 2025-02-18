@@ -19,18 +19,18 @@ import Skills from "@/components/Skills";
 export default function Home() {
   return (
     <div className="overflow-x-hidden">
-    {/* <Cursor/>
+    <Cursor/>
     <Links/>
     <Nav/>
         
     <Main/>
-    <Info/> */}
+    <Info/>
     {/* <Skills/> */}
     {/* <AiProj/> */}
     {/* <DynamicAiProj/> */}
         
   
-    <div className="text-black flex flex-col justify-center items-center">
+    <div className="text-black">
       <p>.</p>
     <p>.</p>
     <p>.</p>
@@ -49,7 +49,7 @@ export default function Home() {
     <p>.</p>
     <p>.</p>
     <p>.</p>
-    <p className="text-white text-4xl font-poppins">Coming Soon ..</p>
+    <p>.</p>
     <p>.</p>
     <p>.</p>
     <p>.</p>
