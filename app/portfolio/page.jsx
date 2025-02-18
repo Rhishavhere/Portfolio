@@ -24,8 +24,7 @@ export default function Home() {
 
   return (
     <>
-      {/* {loading && <LoadingAnimation onComplete={() => setLoading(false)} />} */}
-      <LoadingAnimation/>
+      {loading && <LoadingAnimation onComplete={() => setLoading(false)} />}
 
       <div className="bg-white text-xl text-black font-poppins w-screen h-screen flex flex-col justify-center items-center relative">
         <p>hello. I am Rhishav</p>
