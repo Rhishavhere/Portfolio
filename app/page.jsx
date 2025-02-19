@@ -28,7 +28,7 @@ export default function Home() {
       {loading && <LoadingAnimation onComplete={() => setLoading(false)} />}
 
         <Nav/>
-      <div className="bg-[#f3efec] text-xl text-black font-poppins w-screen h-screen flex flex-col justify-center items-center relative">
+      <div className="bg-[#f3efec] mb-36 text-xl text-black font-poppins w-screen h-screen flex flex-col justify-center items-center relative">
         <div data-cursor-hover>
           <p>hello. I am Rhishav</p>
           <p className="italic text-2xl">welcome to this journey</p>

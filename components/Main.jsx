@@ -90,7 +90,7 @@ export default function Main(){
         height: '843px',
       }}/>
     <main className="flex flex-col justify-center items-center font-poppins pt-40 text-9xl cursor-default relative">
-      <p className="text-1 text-xl font-bebas">RHISHAV &ensp; DHALI</p>
+      {/* <p className="text-1 text-xl font-bebas">RHISHAV &ensp; DHALI</p> */}
       <div data-cursor-hover className=" mt-12 ml-[200px] relative" style={{ width: '500px' }}>
         <div className=" top-0 left-0 w-full flex flex-col justify-center">
         <p className="text-1 text-7xl p-2 textin tracking-tighter" style={{ 

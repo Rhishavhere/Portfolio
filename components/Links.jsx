@@ -1,7 +1,9 @@
 'use client'
 import Image from "next/image"
 import { useState, useEffect } from "react"
-import { FaPlay, FaPause } from "react-icons/fa";
+import Mute from "@/public/Mute.svg"
+import Unmute from "@/public/Unmute.svg"
+
 
 export default function Links(){
 
@@ -46,10 +48,10 @@ export default function Links(){
       <div>
         <button data-cursor-tool
           onClick={toggleMusic}
-          className="fixed bottom-16 right-12 p-2 bg-1 text-white rounded-full"
+          className="fixed bottom-24 right-12 text-white"
           aria-label={isPlaying ? "Pause music" : "Play music"}
         >
-          {isPlaying ? <FaPause size={12} color={"black"} /> : <FaPlay size={12} color={"black"} />}
+          {isPlaying ? <Image src={Unmute} width={40} height={40}/> : <Image src={Mute} width={40} height={40}/>}
         </button>
       </div>
     </div>
