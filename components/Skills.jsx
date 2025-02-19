@@ -4,19 +4,11 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(useGSAP,ScrollTrigger);
+import FlowingMenu from "./ui/FlowingMenu";
 
 export default function Skills(){
 
   useGSAP(()=>{
-    gsap.from(".logo",{
-      scrollTrigger:{
-        trigger:".logo",
-        toggleActions:"restart none none reverse"
-      },
-      opacity:0,
-      delay:0.5,
-      stagger:0.2,
-    }),
     gsap.from(".card",{
       scrollTrigger:{
         trigger:".card",
@@ -29,36 +21,50 @@ export default function Skills(){
     })
   })
 
+  const demoItems = [
+    { 
+      link: '', 
+      text: 'python', 
+      image: 'https://images.unsplash.com/photo-1601370552761-d129028bd833?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      projects: ['selenium', 'hugging face', 'automation', 'pytorch', 'langchain','flask']
+    },
+    { 
+      link: '', 
+      text: 'javascript', 
+      image: 'https://images.unsplash.com/photo-1601370552761-d129028bd833?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      projects: ['p5.js', 'canvas', 'node.js','express']
+    },
+    { 
+      link: '', 
+      text: 'Web Development', 
+      image: 'https://images.unsplash.com/photo-1601370552761-d129028bd833?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      projects: ['react', 'mongoDB', 'tailwind','next']
+    },
+    { 
+      link: '', 
+      text: 'AI Engineering', 
+      image: 'https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?q=80&w=1992&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      projects: ['sckitlearn', 'transformer', 'pytorch','LLMs']
+    },
+    { 
+      link: '', 
+      text: 'Automations', 
+      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      projects: ['scripting', 'AI agents', 'scheduling']
+    },
+    { 
+      link: '', 
+      text: 'Data Structures and Algorithms', 
+      image: 'https://images.unsplash.com/photo-1591696205602-2f950c417cb9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      projects: ['Sorting Algorithms', 'Data Handling', 'Dynamic Programming']
+    }
+  ];
 
   return(
-    <>
-    <div className="flex justify-center items-center m-20 mt-48 mb-36 gap-36">
-      <Image className="logo" src="python.svg" width={40} height={40} />
-      <Image className="logo" src="node.svg" width={40} height={40} />
-      <Image className="logo" src="react.svg" width={40} height={40} />
-      <Image className="logo" src="tensorflow.svg" width={40} height={40} />
-      <Image className="logo" src="adobe.svg" width={40} height={40} />
-      <Image className="logo" src="blender.svg" width={40} height={40} />
+    <div className="flex flex-col justify-center items-center">
+      <div className="relative w-screen h-[500px] font-oswald">
+        <FlowingMenu items={demoItems} />
+      </div>
     </div>
-    <div className="flex gap-4 justify-center items-center ml-20 mr-20">
-      <div className="card bg-[#181715] text-1 font-poppins w-[350px] h-[200px] flex flex-col justify-center text-left p-10 pl-8 ">
-        <p className="text-1/50">01</p>
-        <p className="text-3xl mb-2">WEB DESIGN</p>
-        <p className="text-sm text-1/50">I craft visually stunning and user-centric web experiences that seamlessly blend aesthetics and functionality.</p>
-      </div>
-      <div className="card bg-[#181715] text-1 font-poppins w-[350px] h-[200px] flex flex-col justify-center text-left p-10 pl-8">
-        <p className="text-1/50">02</p>
-        <p className="text-3xl mb-2">DEVELOPMENT</p>
-        <p className="text-sm text-1/50">I&apos;m desire to build innovative and impactful software solutions that solve real-world problems.</p>
-      </div>
-      <div className="card bg-[#181715] text-1 font-poppins w-[350px] h-[200px] flex flex-col justify-center text-left p-10 pl-8">
-        <p className="text-1/50">03</p>
-        <p className="text-3xl mb-2">DSA</p>
-        <p className="text-sm text-1/50">My understanding of DSA allows me to write clean, maintainable, and performant code to handle computational tasks.</p>
-      </div>
-      
-
-    </div>
-    </>
   )
 }

@@ -12,14 +12,14 @@ import Main from "@/components/Main";
 import Info from "@/components/Info";
 import AboutMe from "@/components/AboutMe";
 import Skills from "@/components/Skills";
-import AiProj from "@/components/AiProj";
+import Proj from "@/components/Proj";
 
 import LoadingAnimation from "@/components/LoadingAnimation";
 import SplitText from "@/components/ui/SplitText";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-const DynamicAiProj = dynamic(() => import("@/components/AiProj"), {
+const DynamicProj = dynamic(() => import("@/components/Proj"), {
   ssr: false
 });
 
@@ -43,7 +43,7 @@ export default function Home() {
       {loading && <LoadingAnimation onComplete={() => setLoading(false)} />}
       
         <Nav/>
-      <div className="bg-[#f3efec] mb-36 text-xl text-black font-poppins w-screen h-screen flex flex-col justify-center items-center relative">
+      <div id="top" className="bg-[#f3efec] mb-36 text-xl text-black font-poppins w-screen h-screen flex flex-col justify-center items-center relative">
         <div data-cursor-hover className="p-10 cursor-pointer">
           
           <motion.p style={{ scale: scale }}>
@@ -68,9 +68,8 @@ export default function Home() {
         <Main/>
         <Info/>
         <AboutMe/>
-        {/* <Skills/> */}
-        {/* <AiProj/> */}
-        {/* <DynamicAiProj/> */}
+        <Skills/>
+        <DynamicProj/>
         
         <div className="text-black">
           <p>.</p>

@@ -19,7 +19,7 @@ export default function AboutMe() {
         Your browser does not support the video tag.
       </video>
     </div>
-    <div className="flex flex-col gap-20 m-36 text-[#d3c2aa]">
+    <div id="skills" className="flex flex-col gap-20 m-36 ml-56 text-[#d3c2aa]">
       <div className="flex text-left justify-start">
         <p className="w-[30vw] text-2xl font-poppins font-light"
         >I&apos;m just a 20 years old kid with a keyboard, a sketchpad, and an endless curiosity for the world. I code and develop softwares, and design like every pixel tells a story. </p>
