@@ -45,10 +45,11 @@ export default function Links(){
         <source src="/ambient.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
-      <div>
+      <div className="flex flex-col justify-center items-center fixed bottom-24 right-12 gap-8">
+        <a data-cursor-tool href="#top" className="bg-1 w-6 h-6 flex justify-center items-center font-poppins text-black text-sm rounded-full">up</a>
         <button data-cursor-tool
           onClick={toggleMusic}
-          className="fixed bottom-24 right-12 text-white"
+          className=" text-white"
           aria-label={isPlaying ? "Pause music" : "Play music"}
         >
           {isPlaying ? <Image src={Unmute} width={40} height={40}/> : <Image src={Mute} width={40} height={40}/>}
