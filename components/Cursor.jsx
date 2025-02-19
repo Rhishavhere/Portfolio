@@ -14,12 +14,12 @@ const Cursor = () => {
       
       // Check if the element or its parents are interactive
       const isHovering = targetElement?.closest('[data-cursor-hover]');
-
+      const isHovering2 = targetElement?.closest('[data-cursor-tool]');
       // Animate cursor position
       gsap.to(cursor, {
         x: e.clientX,
         y: e.clientY,
-        scale: isHovering ? 15:1,
+        scale: isHovering ? 15 : isHovering2 ? 3 : 1,
         duration: 0.3,
         ease: "power2.out"
       });
@@ -35,8 +35,7 @@ const Cursor = () => {
   return (
     <div 
       ref={cursorRef}
-      className="fixed top-0 left-0 w-4 h-4 rounded-full bg-white mix-blend-difference pointer-events-none transform -translate-x-1/2 -translate-y-1/2"
-      style={{ zIndex: 50 }}
+      className="fixed top-0 left-0 w-4 h-4 rounded-full mix-blend-difference bg-white pointer-events-none transform -translate-x-1/2 -translate-y-1/2 z-[999]"
     />
   );
 };

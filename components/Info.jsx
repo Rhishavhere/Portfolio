@@ -32,7 +32,7 @@ export default function Info(){
   })
 
   return(
-    <div className="parent bg-[#0e0e0e] font-mont mt-28 mb-20 ">
+    <div id="info" className="parent bg-[#0e0e0e] font-mont mt-28 mb-20 ">
       <div className="flex flex-col justify-center items-center">
 
       <p className="text-2xl mb-8 font-poppins font-normal text-1">About Me</p>

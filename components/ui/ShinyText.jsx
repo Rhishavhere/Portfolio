@@ -1,7 +1,6 @@
 'use client'
 const ShinyText = ({ text, font, disabled = false, speed = 5, className = '', color='#b5b5b5a4' }) => {
   const animationDuration = `${speed}s`;
-  console.log(font)
   return (
     <div
       className={`text-[${color}] bg-clip-text inline-block ${disabled ? '' : 'animate-shine'} ${className}`}

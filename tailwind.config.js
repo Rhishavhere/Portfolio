@@ -9,6 +9,7 @@ module.exports = {
   theme: {
 		// plugins: [addVariablesForColors],
   	extend: {
+			scrollBehavior: ['smooth'],
   		fontFamily: {
   			poppins: [
   				'Poppins',

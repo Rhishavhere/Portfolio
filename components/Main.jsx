@@ -6,6 +6,7 @@ gsap.registerPlugin(useGSAP,ScrollTrigger);
 import Image from "next/image";
 import ShinyText from "./ui/ShinyText";
 import { useRef, useState, useEffect } from "react"
+import waves2 from "@/public/waves2.svg"
 
 export default function Main(){
 
@@ -77,6 +78,7 @@ export default function Main(){
 
   return(
     <div className="relative overflow-hidden main">
+      
     <Image src='/potraitfg.png' width={2000} height={2000} className="bgin -z-10 absolute -top-24 -left-28 object-cover"
       style={{
         width: '1500px',
