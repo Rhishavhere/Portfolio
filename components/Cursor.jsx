@@ -35,7 +35,8 @@ const Cursor = () => {
   return (
     <div 
       ref={cursorRef}
-      className="fixed top-0 left-0 w-4 h-4 rounded-full mix-blend-difference bg-white pointer-events-none transform -translate-x-1/2 -translate-y-1/2 z-[999]"
+      className="fixed top-0 left-0 w-4 h-4 rounded-full mix-blend-difference bg-white pointer-events-none transform -translate-x-1/2 -translate-y-1/2"
+      style={{zIndex:999}}
     />
   );
 };

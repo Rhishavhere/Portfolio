@@ -38,6 +38,7 @@ export default function AiProj(){
   
     
     <div className="w-full h-full mt-36">
+      <Spline scene="https://prod.spline.design/r11oixtU3czw4BBW/scene.splinecode" />
       <div className='mb-20 ml-48 craft'>
         <p className='text-2xl font-poppins text-1 bg-1/10 p-2 pl-4 pr-6 rounded-lg w-fit h-fit'>my crafts</p>
       </div>

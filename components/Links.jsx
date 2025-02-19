@@ -28,7 +28,7 @@ export default function Links(){
   return(
     <div className="fixed flex flex-col gap-5 z-[900]">
       <a href="/">
-        <Image data-cursor-tool src='self_logo.svg' width={70} height={70} className="fixed top-9 left-16"/>
+        <Image data-cursor-tool src='self_logo.svg' width={70} height={70} className="fixed top-20 left-16"/>
       </a>
       <div className="fixed bottom-20 flex flex-col gap-8 left-16">
         <a href="https://www.instagram.com/rhishh__" target="_blank">

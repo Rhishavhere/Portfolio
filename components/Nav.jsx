@@ -8,7 +8,7 @@ export default function Nav(){
   };
 
   return(
-    <div className=" absolute w-screen top-10 flex justify-center gap-48
+    <div className=" absolute w-screen top-20 flex justify-center gap-48
       text-[#0e0e0e] font-bebas text-md tracking-widest cursor-pointer z-[999]">
       <a onClick={() => handleScroll('projects')} data-cursor-tool>PROJECTS</a>
       <a onClick={() => handleScroll('services')} data-cursor-tool>SERVICES</a>
