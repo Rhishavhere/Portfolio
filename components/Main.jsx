@@ -79,17 +79,13 @@ export default function Main(){
   return(
     <div className="relative overflow-hidden main">
       
-    <Image src='/potraitfg.png' width={2000} height={2000} className="bgin -z-10 absolute -top-24 -left-28 object-cover"
-      style={{
-        width: '1500px',
-        height: '844px',
-      }}/>
-    <Image src='/potraitbg.png' width={2000} height={2000} className="bgin -z-30 absolute -top-24 -left-20 object-cover"
+    
+    {/* <Image src='/potraitbg.png' width={2000} height={2000} className="bgin -z-30 absolute -top-24 -left-20 object-cover"
       style={{
         width: '1500px',
         height: '843px',
-      }}/>
-    <main className="flex flex-col justify-center items-center font-poppins pt-40 text-9xl cursor-default relative">
+      }}/> */}
+    <main className="flex flex-col justify-center items-center font-poppins pt-40 text-9xl cursor-default relative bg-[#f3efec] min-h-screen">
       {/* <p className="text-1 text-xl font-bebas">RHISHAV &ensp; DHALI</p> */}
       <div data-cursor-hover className=" mt-12 ml-[200px] relative" style={{ width: '500px' }}>
         <div className=" top-0 left-0 w-full flex flex-col justify-center">
@@ -110,9 +106,9 @@ export default function Main(){
       </div>
     </main>
 
-    <div className="bg-white/5 p-2  w-[100vw] flex justify-center">
+    {/* <div className="bg-white/5 p-2  w-[100vw] flex justify-center">
       <ShinyText text="code, design, and the boundless digital frontier" disabled={false} speed={2} className='text-white/50 text-2xl font-script tracking-widest' />
-    </div>
+    </div> */}
 
     </div>
   )

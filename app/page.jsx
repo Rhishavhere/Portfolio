@@ -19,9 +19,9 @@ import SplitText from "@/components/ui/SplitText";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-const DynamicProj = dynamic(() => import("@/components/Proj"), {
-  ssr: false
-});
+// const DynamicProj = dynamic(() => import("@/components/Proj"), {
+//   ssr: false
+// });
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -65,11 +65,11 @@ export default function Home() {
         <div className=" absolute -bottom-48 z-[100]">
           <Image src={waves2} className="w-screen"/>
         </div>
-        <Main/>
         <Info/>
+        <Main/>
         <AboutMe/>
         <Skills/>
-        <DynamicProj/>
+        <Proj/>
         
         <div className="text-black">
           <p>.</p>

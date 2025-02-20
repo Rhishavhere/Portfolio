@@ -23,10 +23,10 @@ export default function Info(){
       scrollTrigger:{
         trigger:'.parent',
         scroller:'body',
-        start:'-=80 top',
-        end:'+=1500',
+        start:'-=10 top',
+        end:'+=10 top',
         scrub:0.5,
-        pin:true
+        pin:false
       }
     })
   })
@@ -35,12 +35,12 @@ export default function Info(){
     <div id="info" className="parent bg-[#0e0e0e] font-mont mt-28 mb-20 ">
       <div className="flex flex-col justify-center items-center">
 
-      <p className="text-2xl mb-16 font-poppins font-normal text-1">About Me</p>
+      <p className="text-2xl mb-8 font-poppins font-normal text-white/30">About Me</p>
       
       <div className="relative p-3 w-fit flex flex-col justify-center items-center"> 
         <p className="text-6xl text-orange-200/80 font-poppins font-extralight ">
         I&apos;m a <span className="text-2">programmer</span> skilled at creating </p>
-        <div className="box absolute mix-blend-color bg-[#0e0e0e] w-full h-full left-0 top-0"></div>
+        {/* <div className="box absolute mix-blend-color bg-[#0e0e0e] w-full h-full left-0 top-0"></div> */}
       </div>
       </div>
       
@@ -62,7 +62,7 @@ export default function Info(){
       <div className="flex flex-col justify-center items-center">
 
       <div className="relative p-3 w-fit bg-stone-700/30 mt-10 mb-32">
-        <ShinyText text="code and tech." font="poppins" disabled={false} speed={2} className='text-4xl text-orange-200/80 font-poppins text-center' />
+        <ShinyText text="using code and tech." font="poppins" disabled={false} speed={2} className='text-2xl text-orange-200/80 font-poppins text-center' />
         <div className="absolute mix-blend-color bg-[#0e0e0e] w-full h-full left-0 top-0"></div>
       </div>
       </div>

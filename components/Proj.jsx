@@ -20,7 +20,7 @@ export default function Proj(){
   })
 
   return(
-    <div id="projects" className="mt-72">
+    <div id="projects" className="min-h-screen">
 
       <ScrollVelocity
         texts={['projects', '2024 2025']} 
