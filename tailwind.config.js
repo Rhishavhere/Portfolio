@@ -80,6 +80,7 @@ module.exports = {
 				'1':'#aa9d89',
 				'2':'#ec5938',
 				'3':'#D9A362',
+				'4':'#0071e3',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

@@ -87,7 +87,7 @@ export default function Main(){
       }}/> */}
     <main className="flex flex-col justify-center items-center font-poppins pt-40 text-9xl cursor-default relative bg-[#f3efec] min-h-screen">
       {/* <p className="text-1 text-xl font-bebas">RHISHAV &ensp; DHALI</p> */}
-      <div data-cursor-hover className=" mt-12 ml-[200px] relative" style={{ width: '500px' }}>
+      <div data-cursor-hover className="ml-[200px] relative" style={{ width: '500px' }}>
         <div className=" top-0 left-0 w-full flex flex-col justify-center">
         <p className="text-1 text-7xl p-2 textin tracking-tighter" style={{ 
           // color: colors[currentColor],
@@ -96,11 +96,11 @@ export default function Main(){
           
           <div className="flex items-end textin">
             {/* <p className="text-white/70 ml-36 text-3xl text-nowrap p-2 textin">blocks of</p> */}
-            <p className="text-[#ec5938] text-[180px] ml-10 text-left font-bebas phrase">{phrases[currentPhrase].main}</p>
+            <p className="text-2 text-9xl ml-10 text-left font-poppins font-medium phrase">{phrases[currentPhrase].main}</p>
           </div>
           <div className="flex items-end">
-            <p className="text-1/40 text-7xl mb-20 p-2 textin tracking-tighter">with</p>
-            <p className="text-1 text-7xl mb-20 p-2 textin tracking-tighter phrase italic">{phrases[currentPhrase].end}</p>
+            <p className="text-1 text-5xl mb-20 p-2 textin tracking-tighter">with</p>
+            <p className="text-1/50 text-5xl mb-20 p-2 textin tracking-tighter phrase italic">{phrases[currentPhrase].end}</p>
           </div>
       </div>
       </div>

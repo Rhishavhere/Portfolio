@@ -38,8 +38,8 @@ export default function Info(){
       <p className="text-2xl mb-8 font-poppins font-normal text-white/30">About Me</p>
       
       <div className="relative p-3 w-fit flex flex-col justify-center items-center"> 
-        <p className="text-6xl text-orange-200/80 font-poppins font-extralight ">
-        I&apos;m a <span className="text-2">programmer</span> skilled at creating </p>
+        <p className="text-6xl text-white font-poppins font-extralight ">
+        I&apos;m a <span className="text-[#69b0f7]">programmer</span> skilled at creating </p>
         {/* <div className="box absolute mix-blend-color bg-[#0e0e0e] w-full h-full left-0 top-0"></div> */}
       </div>
       </div>
