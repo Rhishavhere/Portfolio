@@ -13,7 +13,7 @@ export default function AboutMe() {
         {/* <Image src='/self_logo.svg' width={700} height={600} className="bgin -z-20 absolute right-0 bottom-0" /> */}
       </div>
     <div className="flex flex-col gap-20 m-36 pt-48 ml-56 text-[#d3c2aa]">
-      <div className="flex text-left justify-start mt-36">
+      <div className="flex text-left justify-start mt-[4vh]">
         <p data-cursor-hover className="w-[30vw] text-3xl font-poppins font-light"
         >I&apos;m just a 20 year old kid with a keyboard, a sketchpad, and an endless curiosity for the world. I code and develop softwares, and design like every pixel tells a story. </p>
       </div>

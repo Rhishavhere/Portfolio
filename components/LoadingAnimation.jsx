@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import CountUp from './ui/CountUp';
 
 /**
  * Component: LoadingAnimation
@@ -74,28 +75,41 @@ function LoadingAnimation({ onComplete }) {
   }, [onComplete]);
 
   return (
+    <>
+    
     <div
       ref={containerRef}
       className="fixed inset-0 bg-black z-[1000] flex flex-col items-center justify-center"
     >
+     
       <div className="relative flex flex-col items-center">
         {/* The progress bar */}
         <div
           ref={barRef}
-          className="bg-white h-[2px] w-64 rounded-md origin-left mt-[32px] absolute"
+          className="bg-white/30 h-[2px] w-64 rounded-md origin-left mt-[36px] absolute"
         />
         {/* The ball – positioned to overlap the bar */}
           <div
             ref={ballRef}
             className="bg-white rounded-full w-8 h-8"
           />
-          <p className='font-poppins itlatic'>loading ...</p>
           {/* <div className="bg-white rounded-full w-6 h-6"></div>
           <div className="bg-white rounded-full w-4 h-4"></div>
           <div className="bg-white rounded-full w-2 h-2"></div> */}
-        
+          
+          
       </div>
+      {/* <p className='font-poppins itlatic mt-10 bg-white/20 p-2 pr-4 pl-4 rounded-lg'>loading ...</p>  */}
+      <CountUp
+        from={0}
+        to={100}
+        separator=""
+        direction="up"
+        duration={1}
+        className="count-up-text text-[300px] absolute left-20 bottom-0 font-bebas text-white/30"
+      />
     </div>
+    </>
   );
 }
 
