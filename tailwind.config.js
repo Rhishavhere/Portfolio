@@ -34,6 +34,14 @@ module.exports = {
 					'Oswald',
 					'serif'
 				],
+				josefin:[
+					'Josefin Sans',
+					'serif'
+				],
+				makh:[
+					'Monomakh',
+					'serif'
+				],
         mont: [
           'Montserrat',
           'serif',

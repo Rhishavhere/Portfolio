@@ -28,6 +28,26 @@ export default function Home() {
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [1, 4]);
 
+  const binaryNumbers1 = "01100100".split("").map((num, index) => (
+    <div key={`num1-${index}`} className="fade-numbers">{num}</div>
+  ));
+
+  const binaryNumbers2 = "01100001".split("").map((num, index) => (
+    <div key={`num2-${index}`} className="fade-numbers">{num}</div>
+  ));
+
+  const binaryNumbers3 = "01101101".split("").map((num, index) => (
+    <div key={`num3-${index}`} className="fade-numbers">{num}</div>
+  ));
+
+  const binaryNumbers4 = "01101111".split("").map((num, index) => (
+    <div key={`num4-${index}`} className="fade-numbers">{num}</div>
+  ));
+
+  const binaryNumbers5 = "01101101".split("").map((num, index) => (
+    <div key={`num5-${index}`} className="fade-numbers">{num}</div>
+  ));
+
   useGSAP(() => {
     gsap.to(".down-arrow", {
       y: 10,
@@ -35,7 +55,7 @@ export default function Home() {
       yoyo: true,
       ease: "power1.inOut",
       duration: 1
-    })
+    });
   }, []);
 
   return (
@@ -44,8 +64,7 @@ export default function Home() {
       
         <Nav/>
       <div id="top" className="bg-[#f3efec] mb-36 text-xl text-black font-poppins w-screen h-screen flex flex-col justify-center items-center relative">
-        <div data-cursor-hover className="p-10 cursor-pointer">
-          
+        <div data-cursor-hover className="p-10 cursor-pointer z-10">
           <motion.p style={{ scale: scale }}>
             hi
           </motion.p>

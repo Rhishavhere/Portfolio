@@ -38,18 +38,19 @@ export default function Proj(){
         />
         <div className="w-40 h-10 bg-[#E3E3E3] absolute bottom-4 right-5 flex justify-center items-center text-black font-poppins font-medium tracking-widest">BLENDER-SPLINE</div>
         <div className="absolute top-72 left-72 text-black text-6xl font-poppins">
-          <div data-cursor-hover>
+          <div>
             <div className="flex items-center gap-6">
-              <p className="tracking-widest">Aura.ai</p>
-              <a href="https://github.com/Rhishavhere/Aura.v1" target='_blank' className="bg-black/5 p-2 rounded-full">
+              <p data-cursor-hover className="tracking-widest">Aura.ai</p>
+              <a data-cursor-tool href="https://github.com/Rhishavhere/Aura.v1" target='_blank' className="bg-black/5 p-2 rounded-full">
                 <Image src='/link.svg' width={30} height={30}/>
               </a>
+              <div className="absolute top-10 -left-48 text-black/10 font-bebas text-9xl">
+                01
+              </div>
             </div>
               <p className="text-xl text-4/90">my multimodal AI system</p>
           </div>
-          <p className="mt-[8vh] text-[2vh] font-light text-black/30 w-[500px]">backed by highly capable finetuned LLama (aura) - powers Aura.v1, a multitasking multimodal ai agent that is aware of vision and local system while operating on user terminal to an extent from searching the internet to making changes in your directories.</p>
-          
-          
+          <p className="mt-[8vh] text-[2vh] font-light text-black/30 w-[500px]">backed by highly capable finetuned LLama (aura) - powers Aura.v1, a multitasking multimodal ai agent that is aware of vision and local system while operating on user terminal to an extent from searching the internet to making changes in your directories.</p> 
         </div>
       </div>
     </div>
@@ -69,22 +70,25 @@ export default function Proj(){
       />
       <Projects 
         number="04"
-        title="wappHi"
+        title="wapp.ai"
         githubLink="https://github.com/Rhishavhere/whatsAgent-2.0"
         description="a Python-LLM based chat automation tool that integrates with WhatsApp and uses AI to generate conversational responses"
       />
       <Projects 
         number="05"
         title="gravity_Sim"
-        githubLink=" "
-        description="a machine learning model to accurately predict household power consumption and identify peak usage times alerting users"
+        githubLink="https://github.com/Rhishavhere/blackhole-gravitation"
+        description="simulates the gravitational pull of a black hole on nearby particles in real time, using Python"
       />
       <Projects 
         number="06"
         title="evolving_ants"
         githubLink=" "
-        description="a machine learning model to accurately predict household power consumption and identify peak usage times alerting users"
+        description="model that simulates an evolving colony of ants on available food source"
       />
+    </div>
+    <div className="bg-white min-h-screen">
+
     </div>
     </>
   )
