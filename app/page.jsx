@@ -49,7 +49,7 @@ export default function Home() {
       {isPhone && !isProceeded && (
         <div className="fixed inset-0 font-poppins text-[#f3efec] bg-[#0e0e0e] z-[9999] flex flex-col items-center justify-center p-4 text-center">
           <h2 className="text-2xl font-bold mb-4">Mobile Warning</h2>
-          <p className="mb-8">This portfolio is best viewed on desktop as of now.<br/>Proceed on mobile at your own experience's risk.</p>
+          <p className="mb-8">This portfolio is best viewed on desktop as of now.<br/>Proceed on mobile at your own experience&apos;s risk.</p>
           <button 
             onClick={() => setIsProceeded(true)}
             className="px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-gray-800 transition-colors"
