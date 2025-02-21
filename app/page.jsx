@@ -25,28 +25,14 @@ import gsap from "gsap";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  const [isPhone, setIsPhone] = useState(true);
+  const [isProceeded, setIsProceeded] = useState(false);
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [1, 4]);
 
-  const binaryNumbers1 = "01100100".split("").map((num, index) => (
-    <div key={`num1-${index}`} className="fade-numbers">{num}</div>
-  ));
-
-  const binaryNumbers2 = "01100001".split("").map((num, index) => (
-    <div key={`num2-${index}`} className="fade-numbers">{num}</div>
-  ));
-
-  const binaryNumbers3 = "01101101".split("").map((num, index) => (
-    <div key={`num3-${index}`} className="fade-numbers">{num}</div>
-  ));
-
-  const binaryNumbers4 = "01101111".split("").map((num, index) => (
-    <div key={`num4-${index}`} className="fade-numbers">{num}</div>
-  ));
-
-  const binaryNumbers5 = "01101101".split("").map((num, index) => (
-    <div key={`num5-${index}`} className="fade-numbers">{num}</div>
-  ));
+  useEffect(() => {
+    setIsPhone(window.innerWidth < 1500);
+  }, []);
 
   useGSAP(() => {
     gsap.to(".down-arrow", {
@@ -60,22 +46,39 @@ export default function Home() {
 
   return (
     <>
-      {loading && <LoadingAnimation onComplete={() => setLoading(false)} />}
+      {isPhone && !isProceeded && (
+        <div className="fixed inset-0 font-poppins text-[#f3efec] bg-[#0e0e0e] z-[9999] flex flex-col items-center justify-center p-4 text-center">
+          <h2 className="text-2xl font-bold mb-4">Mobile Warning</h2>
+          <p className="mb-8">This portfolio is best viewed on desktop as of now.<br/>Proceed on mobile at your own experience's risk.</p>
+          <button 
+            onClick={() => setIsProceeded(true)}
+            className="px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-gray-800 transition-colors"
+          >
+            Proceed Anyway
+          </button>
+        </div>
+      )}
+
+      {(isProceeded || !isPhone) && loading && (
+        <LoadingAnimation onComplete={() => setLoading(false)} />
+      )}
+      
       
         <Nav/>
-      <div id="top" className="bg-[#f3efec] mb-36 text-xl text-black font-poppins w-screen h-screen flex flex-col justify-center items-center relative">
-        <div data-cursor-hover className="p-10 cursor-pointer z-10">
-          <motion.p style={{ scale: scale }}>
-            hi
-          </motion.p>
-          <motion.p style={{ scale: scale }} className="text-4xl">
-            Rhishav here.
-          </motion.p>
-        </div>
+        <div id="top" className="bg-[#f3efec] mb-36 text-xl text-black font-poppins w-screen h-screen flex flex-col justify-center items-center relative">
+          <div data-cursor-hover className="p-10 cursor-pointer z-10">
+            <motion.p style={{ scale: scale }}>
+              hi
+            </motion.p>
+            <motion.p style={{ scale: scale }} className="text-4xl">
+              Rhishav here.
+            </motion.p>
+          </div>
           <div className="absolute top-[60%]">
             <Image src={down} width={20} height={20} className="down-arrow"></Image>
           </div>
-      </div>
+        </div>
+      
       
 
       <div className="overflow-x-hidden">
