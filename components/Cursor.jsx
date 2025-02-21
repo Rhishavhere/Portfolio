@@ -19,7 +19,7 @@ const Cursor = () => {
       gsap.to(cursor, {
         x: e.clientX,
         y: e.clientY,
-        scale: isHovering ? 15 : isHovering2 ? 3 : 1,
+        scale: isHovering ? 20 : isHovering2 ? 5 : 1,
         duration: 0.3,
         ease: "power2.out"
       });
