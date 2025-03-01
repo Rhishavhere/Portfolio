@@ -4,35 +4,23 @@ import { useParams } from 'next/navigation';
 
 const BusPassValidationApp = () => {
   const params = useParams();
-  const slug = params.pass
-  let pass = slug.split('pass-')[1];
-  let fare
-  let type
-  let title
-  if (pass === "ac"){
-    fare = "140.0"
-    title = "Vajra Gold"
-    type = "AC"
-  } else if(pass === "nonac"){
-    fare = "80.0"
-    title = "Ordinary"
-    type = "Ordinary"
-  }else{
-    fare = "Type?"
-  }
-
+  const pass = params.slug
+  
   
   const [isCamera, setIsCamera] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [fare, setFare] = useState('0.0');
+  const [type, setType] = useState('');
+  const [title, setTitle] = useState('');
   const passId = 'TPASS264228531'
   const date = new Date().toLocaleString('en-IN', { day: '2-digit', month: 'short', year: 'numeric'})
-
+  
   // Function to handle QR scan completion
   const handleModal = () => {
     setIsCamera(false);
     setShowModal(true);
   };
-
+  
   // Add handler for camera activation
   const handleCamera = () => {
     setIsCamera(true);
@@ -43,14 +31,31 @@ const BusPassValidationApp = () => {
     }, 1000); // 1000 milliseconds = 1 second
   };
 
-
-
+  useEffect(() => {
+    // let pass = slug.split('pass-')[1];
+    if (pass === "ac"){
+      setFare("140.0");
+      setTitle("Vajra Gold");
+      setType("AC");
+    } else if(pass === "nonac"){
+      setFare("80.0");
+      setTitle("Ordinary");
+      setType("Ordinary");
+    } else {
+      setFare("Type?");
+      setTitle("Type?");
+      setType("Type?");
+    }
+  }, []);
+  
+  
   return (
     <div className="flex flex-col min-h-screen bg-gray-100 p-0 text-black font-poppins">
+ 
       {/* Main Pass Screen (Always rendered) */}
       <div className="m-4 pl-4 pr-4 bg-white shadow-md relative rounded-lg">
         <div className="mb-4 text-center pt-6 flex gap-4">
-          <img src="bmtc.jpg" alt="" className='w-12 h-12' />
+          <img src="/bmtc.jpg" alt="BMTC Logo" className='w-12 h-12' />
           <div className='flex flex-col'>
             <p className="text-md text-gray-800 mb-2">{title} Day Pass</p> 
             <div className='flex justify-center gap-2'>
@@ -109,7 +114,7 @@ const BusPassValidationApp = () => {
           </div>
 
           <div className='absolute right-0'>
-            <img src="profile.jpg" alt="" className='w-20 h-20 rounded-full object-cover' />
+            <img src="/profile.jpg" alt="Passenger Profile" className='w-20 h-20 rounded-full object-cover' />
           </div>
 
           <div className='absolute bottom-0 right-0'>
@@ -123,7 +128,32 @@ const BusPassValidationApp = () => {
       
       {/* Camera Component (rendered conditionally) */}
       {isCamera &&(
-        <div>HELLLOOOO</div>
+        <div className="fixed bg-black bg-opacity-50 flex items-center justify-center z-10">
+        <div className="max-w-md bg-black h-screen w-screen text-white">
+          <div className="text-center mb-4 mt-48">
+            <h2 className="text-xl font-bold text-white">Scan QR Code</h2>
+            <p className="text-white text-sm mt-1">Position the QR code within the frame</p>
+          </div>
+          
+          <div className="relative w-full aspect-square bg-black rounded-lg mb-6 overflow-hidden">
+            {/* QR Scanner Simulation */}
+            <div className="absolute inset-0 border-2 border-gray-700 flex items-center justify-center">
+              <div className="w-3/4 h-3/4 border-2 border-dashed border-gray-700 flex items-center justify-center">
+                <div className="text-white/50 text-sm">
+                  Scanning...
+                </div>
+              </div>
+            </div>
+            
+            <div className="absolute left-0 right-0 h-0.5 bg-red-500 animate-scan" style={{ 
+              top: '52%',
+              animation: 'scan 2s linear infinite',
+            }}></div>
+            
+          </div>
+        
+        </div>
+      </div>
         
       )}
       
