@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from 'next/navigation';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const BusPassValidationApp = () => {
   const params = useParams();
@@ -162,11 +163,12 @@ const BusPassValidationApp = () => {
         <div className="fixed inset-0 bg-black/60 bg-opacity-70 flex items-center justify-center p-4 z-20">
           <div className="bg-white rounded-lg shadow-lg p-5 w-full max-w-sm m-4">
             <div className="text-center mb-4 flex flex-col justify-center items-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                <svg className="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
+              <DotLottieReact
+                className='w-24 h-24'
+                src="/tick.lottie"
+                loop
+                autoplay
+              />
               <p className="text-lg font-semibold w-60 text-gray-800">Self verification done succesfully</p>
             </div>
             
