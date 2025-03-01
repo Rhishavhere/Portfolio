@@ -7,10 +7,16 @@ const BusPassValidationApp = () => {
   const slug = params.pass
   let pass = slug.split('pass-')[1];
   let fare
+  let type
+  let title
   if (pass === "ac"){
     fare = "140.0"
+    title = "Vajra Gold"
+    type = "AC"
   } else if(pass === "nonac"){
     fare = "80.0"
+    title = "Ordinary"
+    type = "Ordinary"
   }else{
     fare = "Type?"
   }
@@ -46,10 +52,10 @@ const BusPassValidationApp = () => {
         <div className="mb-4 text-center pt-6 flex gap-4">
           <img src="bmtc.jpg" alt="" className='w-12 h-12' />
           <div className='flex flex-col'>
-            <p className="text-md text-gray-800 mb-2">Ordinary Day Pass</p> 
+            <p className="text-md text-gray-800 mb-2">{title} Day Pass</p> 
             <div className='flex justify-center gap-2'>
               <div className='bg-green-400/10 text-green-600 rounded-md pr-1 pl-1 flex-1 text-sm p-1'>Daily</div> 
-              <div className='bg-gray-500/20 text-black rounded-md pr-1 pl-1 flex-2 text-sm p-1'>Ordinary</div> 
+              <div className='bg-gray-500/20 text-black rounded-md pr-1 pl-1 flex-2 text-sm p-1'>{type}</div> 
             </div>
           </div>
         </div>
