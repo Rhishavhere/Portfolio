@@ -103,7 +103,7 @@ const BusPassValidationApp = () => {
           </div>
           <div>
             <div className='text-sm text-black/50'>Pass purchase date</div>
-            <div  className='text-sm text-black'>{date}, 06:31 AM</div>
+            <div  className='text-sm text-black'>{date}, 04:12 AM</div>
           </div>
           <div>
             <div className='text-sm text-black/50'>Pass valid from</div>
